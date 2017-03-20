@@ -1,0 +1,46 @@
+/* Forma de criação de comentários em CSS */
+
+/* propriedades aplicadas na tag body, ou seja, no corpo todo do documento HTML */
+body {
+	/* uma cor em hexadecimal começando com # ou em RGB usando a função rgb(); */
+	background-color: #666699;	
+	/* caminho da imagem que deseja exibir no background */
+	background-image: url(imagens/textura.png);
+	/* forma de repetição da imagem: no-repeat (sem repetição), repeat-y (eixo Y) e repeat-x (eixo X); */
+	background-repeat: repeat-y;
+	/* posicionamento da imagem top, center, bottom, left, right */
+	background-position: right;
+	/* definição de rolagem de background, fixed (imagem fixa e conteúdo móvel) ou scroll (imagem rola com conteúdo) */
+	background-attachment: fixed;
+	/* definição da fonte padrão do arquivo HTML, neste caso as duas fontes selecionadas ou qualquer uma sem serifa */
+	font-family: arial, verdana, sans-serif;
+}
+
+/* propriedade aplicada apenas nas tags que tiverem o class associado */
+.bordas {
+	/* definição de bordas, parâmetros na ordem: largura estilo cor; */
+	/* estilos: solid, dashed, dotted, double, inset, outset, groove */
+	border-top: 2px dotted #FFFFFF;
+	border-right: 10px solid #c0c0c0;
+	border-bottom: 5px dashed #333333;
+	border-left: 5px double #777777;
+}
+
+/* propriedade aplicada em todos os parágrafos */
+p {
+	/* definição de largura usando porcentagem */
+	width: 75%;	
+}
+
+/* propriedade aplicada em todos os títulos h1 */
+h1 {
+	/* definição de tamanho de fonte: pode ser em pixel (px), porcentagem (%) ou dimensão (em); */
+	font-size: 45px;
+	/* definição de estilo: normal, italic, oblique; */
+	font-style: italic;
+	/* definição de variação: normal e small-caps; */
+	font-variant: small-caps;
+	/* definiçãi de negrito: normal, bold ou valor numérico; */
+	font-weight: normal;  
+}
+

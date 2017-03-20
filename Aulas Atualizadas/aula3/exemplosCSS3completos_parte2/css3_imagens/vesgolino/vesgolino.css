@@ -1,0 +1,95 @@
+
+#cabeca {
+    margin: 0 auto;
+    padding:10px;
+    height:500px;
+    width:500px;
+    background:#666699;
+    border-radius: 10px;
+    border-radius: 250px 250px 10px 10px;	
+    box-shadow: 10px 10px 10px #666;
+}
+
+.olho {
+    width: 200px;
+    height: 200px;
+    background:#fff;
+    border-radius: 100px;
+    padding:5px auto;
+    border: 20px solid #000; 
+    float:left;
+    box-shadow: 5px 5px 10px #333;
+
+}
+.irisd {
+    width: 100px;
+    height: 100px;
+    margin: 97px 95px;
+    background:#000;
+    border-radius: 100px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.6);
+    padding:0 auto;
+    float:left;
+}
+
+.irise {
+    width: 100px;
+    height: 100px;
+    margin:97px 0px;
+    background:#000;
+    border-radius: 100px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.6);
+    padding:0 auto;
+    float:left;
+}
+
+.boca {
+    width: 300px;
+    height: 40px;
+    background:#000;
+    margin: auto;
+    border-radius: 100px;
+    padding-top:0;
+    margin-top:10px;
+    padding-left:30px;
+    clear: both;
+}
+
+.nariz {
+    width: 150px;
+    height: 100px;
+    background:red;
+    margin: auto;
+    border-radius: 50%;
+    clear: both;
+    box-shadow: inset -5px -5px 20px black;
+}
+
+
+.dentes div {
+    width: 50px;
+    height: 65px;
+    background:#fff;
+    border-top-width:0;
+    border-radius: 0px 0px 10px 10px;
+    float: left;
+    box-shadow: 5px 5px 10px #333;
+    border: 2px solid black;
+}	
+
+.dente1 {
+    margin-left:75px;
+}	
+
+.dente2 {
+    margin-left:10px;
+}	
+
+#texto {
+    margin-top: 40px;
+    font-family: "Trebuchet MS";
+    font-size: 80px;
+    color: #c0c0c0;
+    text-align: center;
+    font-weight: bold;
+}

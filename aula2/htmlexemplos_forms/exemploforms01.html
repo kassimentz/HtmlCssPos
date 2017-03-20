@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Formulários - Parte 1</title>
+	</head>
+	<body>
+
+		<!-- Exemplo de uso de tags de formulários que possuem ótima compatibilidade crossbrowser (funcionam igualmente em todos os browsers) -->
+
+
+		<!-- Atenção: lembrar que os métodos GET e POST funcionam de forma diferentes
+			 get - sem camada de segurança e com limitação de caracteres e formatos
+			 post - com camada de segurança e capaz de transferir grande quantidade de conteúdo -->
+		<form action="pag.php" method="post">
+
+			<!-- Usado para especificar a informação associada ao elemento de formulário
+				 Atenção: lembrar de usar sempre o atributo 'for' associado ao 'id' do elemento -->
+			<label for="nome">Nome:</label>
+
+			<!-- Elemento input serve para entrada, seleção e controle em formulários
+				 Diferencia-se pelo conteúdo do atributo type que faz com que o input apresente um comportamento específico -->
+			<input type="text" id="nome" name="nome">
+			<br><br>
+
+			<!-- Elemento usado para senhas, ofusca o conteúdo por segurança -->
+			<label for="senha">Senha:</label>
+			<input type="password" id="senha" name="senha">
+			<br><br>
+
+			<!-- Elemento para seleção de dados pré-definidos (seleção de apenas um valor) 
+				 Atenção: lembrar que se deve usar sempre o mesmo valor para o atributo 'name' e necessidade de estipular o valor no elemento 'value' -->
+			<input type="radio" name="rd" id="rd1" value="F">
+			<label for="rd1">Feminino</label>
+			<input type="radio" name="rd" id="rd2" value="M" checked="checked">
+			<label for="rd2">Masculino</label>
+			<br><br>
+
+			<!-- Elemento para seleção de dados pré-definidos (possibilidade de seleção de mais de um valor) 
+				 Atenção: recomenda-se usar sempre o mesmo valor para o atributo 'name' e necessidade de estipular o valor no elemento 'value' -->
+			<input type="checkbox" name="ck" id="ck1" value="M">
+			<label for="ck1">Manhã</label>
+			<input type="checkbox" name="ck" id="ck2" value="T">
+			<label for="ck2">Tarde</label>
+			<input type="checkbox" name="ck" id="ck3" value="N" checked="checked">
+			<label for="ck3">Noite</label>
+			<br><br>
+
+			<!-- Elemento usado como interface para selecionar um arquivo no computador 
+				 Atenção: o processo de upload deve ser realizado no back-end, este elemento apenas facilita a seleção do arquivo -->
+			<label for="arquivo">Upload de arquivo:</label>
+			<input type="file" id="arquivo" name="arquivo">
+			<br><br>
+
+			<!-- Elemento para quantidade maior de texto, podendo ser definido tamanho da caixa de texto -->
+			<textarea id="descricao" name="descricao" cols="50" rows="5" maxlength="140"></textarea>
+			<br><br>
+
+
+			<!-- Elemento para caixa de seleção (também chamada de combobox) -->
+			<label for="estados">Estados:</label>
+			<select id="estados" name="estados">
+				<option value="">Selecione...</option>
+				<option value="RS">Rio Grande do Sul</option>
+				<option value="SC">Santa Catarina</option>
+				<option value="PR" selected="selected">Paraná</option>
+			</select>
+			<br><br>
+
+			<!-- Elemento para caixa de seleção com subdivisões entre as opções -->
+			<label for="cidades">Estados:</label>
+			<select id="cidades" name="cidades">
+				<option value="">Selecione...</option>
+				<optgroup label="Rio Grande do Sul">
+					<option value="PFD">Passo Fundo</option>
+					<option value="PEL">Pelotas</option>
+					<option value="POA">Porto Alegre</option>
+				</optgroup>		
+				<optgroup label="Santa Catarina">
+					<option value="CHA">Chapecó</option>
+					<option value="FLO">Florianópolis</option>
+					<option value="JOA">Joaçaba</option>
+				</optgroup>
+				<optgroup label="Paraná">	
+					<option value="CUR">Curitiba</option>
+					<option value="CAS">Cascavel</option>
+				</optgroup>
+			</select>
+			<br><br>
+
+
+			<!-- Elemento de controle para envio de dados do formulário ou algum outro processo programado, 
+				 porém ao invés de botão utiliza-se uma imagem -->
+			<input type="image" id="bimagem" name="bimagem" src="imagens/botao.png" width="200" alt="Botão de envio de orçamento">	
+			<br><br>
+
+			<!-- Elemento de controle para botão com ação programável -->
+			<input type="button" id="bbotao" name="bbotao" value="Qualquer coisa!">
+
+			<!-- Elemento de controle para criação de um botão que exclui o conteúdo dos outros elementos de formulário -->
+			<input type="reset" id="blimpar" name="blimpar" value="Apaga tudo!">
+
+			<!-- Elemento de controle para criação de um botão que envia o conteúdo dos outros elementos de formulário -->
+			<input type="submit" id="benviar" name="benviar" value="Vai lá!">
+
+		</form>
+
+	</body>
+</html>	

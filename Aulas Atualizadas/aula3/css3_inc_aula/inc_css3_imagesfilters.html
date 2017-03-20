@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS 3 - Aplicação de filtros em imagens</title>
+        <meta charset="UTF-8">
+
+        <style type="text/css">
+           
+            figure {
+                margin: 40px;
+                width: 500px;
+            }
+            
+            figure figcaption {
+                background-color: #c0c0c0;
+                font-family: arial;
+                padding: 10px
+            }
+            
+            img {
+                width: 100%;
+            }
+
+            #filter1 {
+                -webkit-filter: grayscale(100%);
+            }
+
+            #filter2 {
+                -webkit-filter: blur(2px);   
+            }
+
+            #filter3 {
+                -webkit-filter: brightness(40%);
+            }
+
+            #filter4 {
+                -webkit-filter: contrast(40%);
+            }
+
+            #filter5 {
+                -webkit-filter: invert(100%);
+            }
+
+            #filter6 {
+                -webkit-filter: sepia(100%);
+            }
+
+            #filter7 {
+                -webkit-filter: saturate(100%);
+            }
+
+            #filter8 {
+                -webkit-filter: hue-rotate(50deg);
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+
+        <figure>
+            <img src="imagens/img.jpg" id="filter1">
+            <figcaption>grayscale</figcaption>
+        </figure>
+
+        <figure>
+            <img src="imagens/img.jpg" id="filter2">
+            <figcaption>blur</figcaption>
+        </figure>
+
+        <figure>        
+            <img src="imagens/img.jpg" id="filter3">
+            <figcaption>brightness</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter4">
+            <figcaption>contrast</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter5">
+            <figcaption>invert</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter6">
+            <figcaption>sepia</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter7">
+            <figcaption>saturate</figcaption>
+        </figure>   
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter8">
+            <figcaption>hue-rotate</figcaption>
+        </figure>
+    </body>
+</html>

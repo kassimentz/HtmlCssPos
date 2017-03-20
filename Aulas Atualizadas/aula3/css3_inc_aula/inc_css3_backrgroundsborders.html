@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS 3 - Exemplos de aplicação de Background e Bordas</title>
+        <meta charset="UTF-8">
+
+        <style type="text/css">
+
+            * {
+                font-size: 20px; 
+                font-family: verdana, sans-serif;
+                font-weight: bold;
+            }
+
+            h2 { 
+                font-size: 28px; 
+                margin-top: 50px; 
+            }
+
+            section { 
+                margin-left: 40px; 
+            }
+
+            #clip p {
+                background: url("imagens/img.jpg");
+                color: #FFF;
+                padding: 20px;
+                border: 20px dotted #c0c0c0;
+                width: 500px;
+                margin-bottom: 50px;
+            }
+
+            #clip p i {
+                color: orange;
+            }
+
+            #clip .content-box {
+                background-clip: content-box;
+            }
+
+            #clip .border-box {
+                background-clip: border-box;
+            }
+
+            #clip .padding-box {
+                background-clip: padding-box;
+            }
+
+            #clip .text {
+               -webkit-background-clip: text;
+               -moz-background-clip: text;
+               color: transparent;
+            }
+
+            /* */
+
+            #origin div {
+                height: 150px;
+                width: 350px;
+                background: url("imagens/img.jpg") no-repeat;
+                background-size: cover;
+                border: 30px solid rgba(23, 23, 23, 0.5);
+                padding: 30px;
+                margin-bottom: 30px;
+            }
+
+            #origin div p, #size div p, #border div p  {
+                font: 18px verdana;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            #origin .content-box {
+                background-origin: content-box;
+            }
+
+            #origin .border-box {
+                background-origin: border-box;   
+            }
+
+            #origin .padding-box {
+                background-origin: padding-box;
+            }
+
+            /* */
+
+            #size div {
+                height: 400px;
+                width: 450px;
+                border: 20px solid black;
+                margin-bottom: 30px;
+
+            }
+
+            #cover {
+                background: url("imagens/img.jpg") no-repeat;
+                background-size: cover;
+               
+            }
+
+            #contain {
+                background: url("imagens/img.jpg") no-repeat;
+                background-size: contain; 
+                
+            }
+
+            #tam {
+                background: url("imagens/img.jpg") no-repeat;
+                background-size: 85% 75%;
+                
+            }
+
+            #multiplos {
+                 background-image: url(imagens/flor.png),url(imagens/img.jpg);
+                 background-size: auto, cover;
+                 background-repeat: no-repeat, no-repeat;
+                 background-position: bottom left, center center;
+            }
+
+            #border div {
+                background: url("imagens/img.jpg") no-repeat;
+                background-size: cover;
+                width: 400px;
+                height: 400px;
+                margin-bottom: 60px;
+            }
+
+            #border .radius1 {
+                border-radius: 100px;
+            }
+
+            #border .radius2 {
+               border-radius: 50%;
+            }
+
+            #border .radius3 {
+                border-radius: 10px 20px 50px 30px;
+            }
+
+            #border .border-image {
+                border: 80px solid transparent;
+                padding: 10px 20px;
+                background-image: none;
+                border-image-source: url(imagens/img.jpg);
+                border-image-slice: 20%;
+            }
+
+            #border .border-image p {
+                color: black;
+            }
+
+            #border .box-shadow {
+                
+                padding: 10px 20px;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+
+        <section id="clip">
+            <h2>Aplicações de background-clip</h2>
+
+            <p class="content-box"><i>background-clip: content-box;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</p> 
+
+            <p class="border-box"><i>background-clip: border-box;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</p>
+
+            <p class="padding-box"><i>background-clip: padding-box;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</p>
+
+            <p class="text"><i>background-clip: text;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</p>
+
+        </section>
+
+        <section id="origin"> 
+
+            <h2>Aplicações de background-origin</h2>
+
+            <div class="content-box"><p>background-origin: context-box;</p></div>
+
+            <div class="border-box"><p>background-origin: border-box;</p></div>
+
+            <div class="padding-box"><p>background-origin: padding-box;</p></div>
+
+        </section>    
+
+        <section id="size">
+
+            <h2>Aplicações de background-size</h2>
+
+            <div id="cover"><p>background-size: cover;</p></div>
+
+            <div id="contain"><p>background-size: cantain;</p></div>
+
+            <div id="tam"><p>background-size: 300px 100px;</p></div>
+
+            <div id="multiplos"><p>múltiplas imagens</p></div>
+            
+        </section>
+
+
+        <section id="border">
+
+            <h2>Propriedades para bordas</h2>
+
+            <div class="radius1"><p>border-radius: 100px;</p></div>
+
+            <div class="radius2"><p>border-radius: 50%;</p></div>
+
+            <div class="radius3"><p>border-radius: 10px 20px 50px 30px;</p></div>
+
+            <div class="border-image"><p>border-image</p></div>
+
+            <div class="box-shadow"><p>box-shadow</p></div>
+
+        </section>
+
+    </body>
+</html>
+
+

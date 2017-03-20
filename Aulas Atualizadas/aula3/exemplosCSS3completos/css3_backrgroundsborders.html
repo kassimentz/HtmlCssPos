@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS 3 - Exemplos de aplicação de background e bordas</title>
+        <meta charset="UTF-8">
+
+        <style type="text/css">
+
+            * {
+                font-size: 20px; 
+                font-family: verdana, sans-serif;
+                font-weight: bold;
+            }
+
+            h2 { 
+                font-size: 28px; 
+                margin-top: 50px; 
+            }
+
+            section { 
+                margin-left: 40px; 
+            }
+
+            #clip div, #origin div {
+                background: url("imagens/img.jpg") no-repeat;
+                color: #FFF;
+                padding: 40px;
+                border: 30px dotted #c0c0c0;
+                width: 500px;
+                height: 150px;
+                display: block;
+                margin-bottom: 60px;
+            }
+
+            #clip i, #origin i {
+                color: orange;
+            }
+
+            /* aplica a imagem de fundo apenas no conteúdo */
+            #clip .content-box {
+                background-clip: content-box;
+            }
+
+            /* aplica a imagem a partir da borda (canto superior esquerdo) */
+            #clip .border-box {
+                background-clip: border-box;
+            }
+
+            /* aplica a imagem respeitando as bordas, até o final da área útil */
+            #clip .padding-box {
+                background-clip: padding-box;
+            }
+
+            /* aplica a imagem no texto, funciona de maneira restrita, apenas no Chrome e usando prefixo */
+            #clip .text {
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+            
+            /* inicia a aplicação da imagem de fundo a partir do canto superior esquerdo do conteúdo */
+            #origin .content-box {
+                background-origin: content-box;
+            }
+
+            /* inicia a aplicação da imagem de fundo a partir do início da borda do canto superior esquerdo */
+            #origin .border-box {
+                background-origin: border-box;
+            }
+
+            /* inicia a aplicação da imagem de fundo a partir do canto superior esquerdo da área útil */
+            #origin .padding-box {
+                background-origin: padding-box;
+            }
+           
+            #size div, #multiplos div {
+                height: 400px;
+                width: 450px;
+                border: 20px solid black;
+                margin-bottom: 30px;
+                background: url("imagens/img.jpg") no-repeat;
+            }
+            
+            #size div p, #border div p  {
+                font: 18px verdana;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                padding-top: 50px;
+            }
+           
+            /* cobre todo o background adaptando a imagem (esticando) */
+            #size .cover {
+                background-size: cover;
+            }
+
+            /* cobre o background levando em consideração a largura */
+            #size .contain {
+                background-size: contain; 
+            }
+            
+            /* possibilidade de estipular largura e altura da imagem no background (em px ou %) */
+            #size .tam {
+                background-size: 370px 200px; 
+            }
+            
+            /* possibilidade de inserir múltiplas imagens no background */
+            /* a ordem dos elementos define a ordem de aparição no background, primeira imagem deinida estará sempre mais acima do que as restantes */
+            #multiplos .multi {
+                background: url("imagens/flor.png"), url("imagens/img.jpg");
+                background-size: auto, cover;
+                background-repeat: no-repeat, no-repeat;
+                background-position: bottom left, center center;   
+            }
+             
+            #border div {
+                background: url("imagens/img.jpg") no-repeat;
+                background-size: cover;
+                width: 400px;
+                height: 400px;
+                margin-bottom: 60px;
+            }
+
+            /* borda arredondada com valor em pixel para todos os cantos */
+            #border .radius1 {
+                border-radius: 100px;
+            }
+
+            /* borda arredondada com valor em porcentagem para todos os cantos */
+            #border .radius2 {
+                border-radius: 50%;
+            }
+
+            /* borda arredondada com valor diferentes para cada canto */
+            /* ordem de valor: a partir do canto superior esquerdo em sentindo horário */
+            #border .radius3 {
+                border-radius: 100px 20px 50px 70px;
+            }
+
+            #border .border-image {
+                border: 80px solid transparent;
+                padding: 10px 20px;
+                background-image: none;
+                /* definição da imagem que será utilizada na borda */
+                border-image-source: url("imagens/img.jpg");
+                /* definição do "pedaço" de imagem que será utilizado (em px ou %)*/
+                border-image-slice: 20%;
+                /* definição da largura da borda */
+                border-image-width: 80px;
+                /* definição do tipo de adaptação da imagem na borda * /
+                /* valores: stretch, repeat, round, space, initial  */
+                border-image-repeat: stretch;
+            }
+
+            #border .border-image p {
+                color: black;
+            }
+
+            /* inserção de sombras no elemento, tantas quanto forem necessárias separadas por vírgula */
+            /* ordem dos valores: eixoX eixoY blur cor */
+            #border .box-shadow {
+                box-shadow: 15px 15px 10px #666699, -20px -20px 5px #c0c0c0;
+                padding: 10px 20px;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+
+        <section id="clip">
+            <h2>Aplicações de background-clip</h2>
+            <div class="content-box"><i>background-clip: content-box;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</div> 
+            <div class="border-box"><i>background-clip: border-box;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</div>
+            <div class="padding-box"><i>background-clip: padding-box;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</div>
+        </section>
+
+        <section id="origin"> 
+            <h2>Aplicações de background-origin</h2>
+            <div class="content-box"><i>background-origin: content-box;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</div> 
+            <div class="border-box"><i>background-origin: border-box;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</div>
+            <div class="padding-box"><i>background-origin: padding-box;</i><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a dui tempor, tincidunt mi quis, tempor nisl. Praesent sit amet viverra lacus.</div>
+        </section>    
+
+        <section id="size">
+            <h2>Aplicações de background-size</h2>
+            <div class="cover"><p>background-size: cover;</p></div>
+            <div class="contain"><p>background-size: cantain;</p></div>
+            <div class="tam"><p>background-size: 300px 100px;</p></div>
+        </section>
+        
+        <section id="multiplos">
+            <h2>Aplicação de múltiplos backgrounds</h2>
+            <div class="multi"><p>múltiplas imagens</p></div>
+        </section>
+
+        <section id="border">
+            <h2>Propriedades para bordas</h2>
+            <div class="radius1"><p>border-radius: 100px;</p></div>
+            <div class="radius2"><p>border-radius: 50%;</p></div>
+            <div class="radius3"><p>border-radius: 10px 20px 50px 30px;</p></div>
+            <div class="border-image"><p>border-image</p></div>
+            <div class="box-shadow"><p>box-shadow</p></div>
+        </section>
+
+    </body>
+</html>
+
+

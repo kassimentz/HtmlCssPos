@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulários em HTML 5 - Novos elementos</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+	<form action="pag.php" method="post">
+			
+		<!-- Elemento para entrada de dados de e-mail, já existe validação associada.
+			 Atenção: a validação é relativa a sintaxe, ou seja, analisa se existe @ e . '
+			 Compatível em: todos os principais browser em suas versões mais recentes -->
+		<label for="contato">E-mail:</label>
+		<input type="email" name="contato" id="contato" required placeholder="Apenas e-mail válido">
+		<br><br>
+
+		<!-- Elemento para entrada de dados de URL, já existe validação associada.
+			 Atenção: a validação é relativa a sintaxe, ou seja, analisa se 
+			 existe http:// ou https:// e . 
+			 Compatível em: todos os principais browser em suas versões mais recentes -->
+		<label for="site">Site:</label>
+		<input type="url" name="site" id="site" autofocus placeholder="Inicie com http://">
+		<br><br>
+
+		<!-- Elemento para entrada de valores numéricos, pode-se trabalhar com uma faixa 
+		     específica de valores e inclusive a escolha do incremento de valores 
+			 Compatível em: todos os principais browser em suas versões mais recentes 
+			 (a validação tem variação entre eles) -->
+		<label for="valor">Valor: </label>
+		<input type="number" name="valor" id="valor" min="10" max="50" step="5" value="20">
+		<br><br>
+	
+		<!-- Semelhante ao elemento anterior para escolha de valores numéricos, porém com 
+		 	 aspecto gráfico. Também pode-se trabalhar com uma faixa específica de valores 
+		 	 e inclusive a escolha do incremento de valores 
+			 Compatível em: todos os principais browser em suas versões mais recentes 
+			 (interface tem variação entre eles -->
+		<label for="faixa">Faixa de valores</label>
+		<input type="range" name="faixa" id="faixa" min="10" max="50" step="5" value="25">
+		<br><br>	  	 
+
+		<!-- Elemento para escolha de uma cor, usa a paleta de cores do sistema operacional
+			 Compatível em: Chrome, Firefox e Opera -->	
+		<label for="cor">Cor:</label>
+		<input type="color" name="cor" id="cor">
+		<br><br>
+
+		<!-- Elemento para ser utilizado como campo de busca, termos de busca anteriores são associados
+			 Atenção: a busca propriamente dita deve ser criada no back-end 
+			 Compatível em: todos os principais browser em suas versões mais recentes -->	
+		<label for="busca">Buscar:</label>
+		<input type="search" name="busca" id="busca" required>
+		<br><br>
+
+		<!-- Elemento para ser utilizado como campo para entrada de telefone
+			 Compatível em: todos os principais browser em suas versões mais recentes -->	
+		<label for="telefone">Telefone:</label>
+		<input type="tel" name="telefone" id="telefone" disabled>
+		<br><br>
+
+		<!-- Elemento para escolha de uma data associada a um calendário navegável
+			 Compatível em: Chrome e Opera -->	
+		<label for="data">Data:</label>
+		<input type="date" name="data" id="data">
+		<br><br>
+
+		<!-- Elemento para escolha de um horário associada a um elemento navegável
+			 Compatível em: Chrome e Opera -->	
+		<label for="horario">Horário:</label>
+		<input type="time" name="horario" id="horario">
+		<br><br>
+
+		<!-- Elemento híbrido entre campo de texto e select, 
+		     valores pré-determinados com possibilidade de filtragem
+			 Compatível em: Chrome, Firefox, Internet Explorer e Opera -->	
+		<label for="browser">Navegador:</label>
+		<input list="navs" name="browser" id="browser"> 
+		<datalist id="navs">
+			<option value="Internet Explorer">Internet Explorer</option>
+			<option value="Google Chrome">Google Chrome</option>
+			<option value="Mozilla Firefox">Mozilla Firefox</option>
+			<option value="Opera">Opera</option>
+			<option value="Safari">Safari</option>			
+			<option value="Edge">Edge</option>
+		</datalist>
+		<br><br><br>
+
+		<input type="submit" name="acao" id="acao" value="Enviar"> 
+
+	</form>
+
+</body>
+</html>

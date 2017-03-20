@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS 3 - Exemplos de aplicação de seletores complexos</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+
+            * {
+                font-size: 16px; 
+                font-family: arial, verdana, sans-serif;
+            }
+            
+            a { 
+                margin: 10px; 
+                display: inline-block;
+                width: 100px;
+            }
+
+            /* seleção de todos os elementos "input" que possuem o atributo "placeholder" */
+            input[placeholder] {
+                border: 2px dotted black;
+            }
+            
+            /* seleção de todos os elementos "input" que possuem o atributo "type" com o valor específico "email" */
+            input[type="email"] {
+                border: 2px solid orange;
+            }
+            
+            /* seleção de todos os elementos "p" que possuem o atributo "class" que contenha o valor "b" em uma lista separada por espaços */
+            p[class~="b"] { 
+                background-color: orange; 
+            }
+            
+            /* seleção de todos os elementos "a" que possuem o atributo "href" com o valor que inicie com "con" */
+            a[href^="con"] {
+                background-color: red;
+            }
+            
+            /* seleção de todos os elementos "a" que possuem o atributo "href" com o valor que termine com "php" */
+            a[href$="php"] {
+                border: 2px solid blue;
+            }
+            
+            /* seleção de todos os elementos "a" que possuem o atributo "href" com o valor que contenha "home" */
+            a[href*="home"] {
+                border: 2px solid green;
+            }
+            
+            /* seleção da primeira ocorrência do elemento "li" */
+            li:first-child {
+                background-color: red; 
+            }
+
+            /* seleção da última ocorrência do elemento "li" */
+            li:last-child {
+                background-color: blue; 
+            }
+            
+            /* seleção de todos as ocorrências impares do elemento "li" */
+            li:nth-child(odd){
+                color: #00ff00;
+            }
+
+            /* seleção de todos as ocorrências pares do elemento "li" */
+            li:nth-child(even){
+                color:#ff0000;
+            }
+            
+            /* seleciona o elemento "dd" porém este deve ser o terceiro elemento em sua estrutura (dentro do elemento pai) */
+            /* neste caso, a sequencia de elementos no <dl> é (a)<dt>, (b)<dd>, (c)<dd>, (d)<dt>, (e)<dd> */
+            /* assim: o "dd" letra b, que está na terceira posição, será selecionado */
+            dd:nth-child(2) {
+                background-color: blue;
+            }
+
+            /* seleciona o elemento "dd" que é o terceiro elemento em sua estrutura (dentro do elemento pai) */
+            /* neste caso, a sequencia de elementos no <dl> é (a)<dt>, (b)<dd>, (c)<dd>, (d)<dt>, (e)<dd> */
+            /* assim: o "dd" letra c, que é o terceiro dentre todos os "dd" */
+            dd:nth-of-type(2) {
+                border: 3px solid orange;
+            }
+            
+            /* seleciona o elemento "dd" porém este deve ser o terceiro elemento em sua estrutura (dentro do elemento pai) */
+            /* neste caso, a sequencia de elementos no <dl> é (a)<dt>, (b)<dd>, (c)<dd>, (d)<dt>, (e)<dd> */
+            /* assim: o "dd" letra c, que está na quarta posição, será selecionado */            
+            dd:nth-last-child(3) {
+                background-color: red;
+            }
+            
+            /* seleciona o elemento "dd" que é o terceiro elemento em sua estrutura (dentro do elemento pai) */
+            /* neste caso, a sequencia de elementos no <dl> é (a)<dt>, (b)<dd>, (c)<dd>, (d)<dt>, (e)<dd> */
+            /* assim: o "dd" letra b, que é o terceiro dentre todos os "dd" */
+            dd:nth-last-of-type(3) {
+                border: 3px solid green;
+            }
+ 
+            /* aplicada as propriedades em todas as "div", exceto a "div" que tenha o "class" com valor "footer" */
+            div:not(.footer) {
+                font-weight: bold;
+            }
+            
+            /* seleciona os elementos "li" que não contém valor */
+            li:empty {
+                border: 2px solid red;
+            }
+
+            /* seleciona os elementos "input" que possuem o atributo "disabled" */
+            input:disabled {
+                background-color: orange;
+            }
+
+            /* seleciona os elementos "input" que possuem o atributo "checked" */
+            input:checked {
+                margin-left: 100px;
+            }
+           
+            /* seleciona os elementos "input" que possuem o atributo "required" */
+            input:required {
+                border: 2px solid red;
+            }
+            
+            /* seleciona os elementos "input" que possuem valores válidos */
+            input:valid {
+                background-color: #d2f1d2;
+            }
+            
+            /* seleciona os elementos "input" que possuem valores inválidos */
+            input:invalid {
+                background-color: #ffcccc;
+            }
+
+            /* aplica as propriedades na primeira letra de cada ocorrência do elemento "p" */
+            p:first-letter {
+                color: red;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            /* aplica as propriedades na primeira linha de cada ocorrência do elemento "p" */
+            p:first-line {
+                color: blue;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            /* adiciona o conteúdo estipulado na propriedade "content", seguindo as demais propriedades definidas, depois de cada elemento "p" */
+            p:after {
+                content: " >>>>> ";
+                font-size: 20px;
+                color: #c0c0c0;
+            }
+
+            /* adiciona o conteúdo estipulado na propriedade "content", seguindo as demais propriedades definidas, depois de cada elemento "li" */            
+            li:before {
+                content: " *** ";
+                font-size: 20px;
+                color: #333;
+            }
+            
+            /* aplica a propriedade apenas nos parágrafos que são precedidos pelo elemento "h3" */
+            h3 + p {
+                background-color: green;
+            }
+            
+            /* aplica a propriedade em todos os elementos "a" que estão dentro do "p", independente da hieraquia */
+            p a {
+                background-color: red;
+            }
+
+            /* aplica a propriedade em todos os elementos "a" que estão diretamente dentro do elemento "p" (hiearquia direta) */
+            p > a {
+                border: 2px solid green;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <form method="post" action="pag.php">
+            <input type="text" placeholder="Nome" disabled>
+            <input type="text" placeholder="Usuário" required>
+            <input type="email" placeholder="E-mail">
+            <input type="password" placeholder="Senha">
+            <label for="pergunta">Manter conectado?</label>
+            <input type="checkbox" id="pergunta" value="S">
+            <input type="submit" value="Enviar">
+        </form>
+        <br>
+
+        <a href="home.html">Home</a>
+        <a href="conteudos.html">Conteúdos</a>    
+        <a href="contato.php">Contato</a>    
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li><a href="#">Item 4</a></li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li></li>
+            <li>Item 8</li>
+        </ul>
+        
+        <dl>
+            <dt>Item 1</dt>
+            <dd>Item 1.1</dd>
+            <dd>Item 1.2</dd>
+            <dt>Item 2</dt>
+            <dd>Item 2.1</dd>
+        </dl>
+        
+        <h3>Título 1</h3>
+        <p>Lorem inpsum <br>dolor lero lero</p>
+        <h3>Título 2</h3>
+        <a href="#">Link</a>
+
+        <p class="a b c">Parágrafo um</p>
+        <p class="d e f g">Parágrafo dois</p>
+        <p class="b f g">Parágrafo três</p>
+
+        <div>Esta div fica em negrito.</div>
+        <div>Esta div fica em negrito.</div>
+        <div class="footer">Esta div não fica em negrito.</div>
+
+        <p>
+            Lorem <a href="#">ipsum</a> dolor sit amet 
+            Lorem ipsum <span><a href="#">dolor</a></span> sit amet
+        </p>
+        
+    </body>
+</html>

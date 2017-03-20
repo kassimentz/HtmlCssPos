@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Efeitos de transição em CSS 3</title>
+
+        <style type="text/css">
+
+            body {
+                font-family: arial, verdana, sans-serif;
+            }
+            
+            h2 {
+                color: #636;
+                font-size: 30px;
+            }
+            
+            p {
+              text-align: center;
+              color: #fff;
+              font-size: 16px;
+            }
+ 
+            #transition div {
+                width: 200px;
+                height: 100px;
+                background-color: #666699;
+                margin: 100px;
+                transition: all 1s ease-in-out;
+            }
+            
+            #transition .t0:hover {
+                border-radius: 10px 20px 50px 0px;
+                opacity: 0.3;
+               
+            }
+
+            #transition .t1:hover {
+                border-radius: 10px 20px 50px 0px;
+                opacity: 0.3;
+                transform: rotate(180deg) scale(1.5);
+                transition: all 2s ease;
+               
+            }
+
+            #transition .t2:hover {
+                transform: skew(45deg) translateX(300px);
+                border-radius: 50px;
+                transition: all 2s ease-in-out;
+            }
+            
+            #timing div {
+                width: 100px;
+                height: 50px;
+                background-color: #666699;
+                margin: 30px 100px;
+            }
+            
+            #timing .t0:hover {
+                transition-property: width;
+                transition-duration: 6s;
+                transition-timing-function: ease; /* transição com início lento, depois rápido e final lento */
+                width: 400px;
+            }
+            
+            #timing .t1:hover {
+                transition-property: width;
+                transition-duration: 6s;
+                transition-timing-function: linear; /* mesmo ritmo do início ao final */
+                width: 400px;
+            }
+            
+            #timing .t2:hover {
+                transition-property: width;
+                transition-duration: 6s;
+                transition-timing-function: ease-in; /* transição com início lento */
+                width: 400px;
+            }
+            
+            #timing .t3:hover {
+                transition-property: width;
+                transition-duration: 6s;
+                transition-timing-function: ease-out; /* transição com final lento */
+                width: 400px;
+            }
+            
+            #timing .t4:hover {
+                transition-property: width;
+                transition-duration: 6s;
+                transition-timing-function: ease-in-out; /* transição com início e final lento */
+                width: 400px;
+            }
+            
+           
+            a {
+                display: block;
+                width: 300px;
+                font-size: 20px;
+                background-color: #CCC;
+                color: #000;
+                padding: 20px;
+                margin: 60px;
+                text-decoration: none;
+                transition-delay: 2s;
+                transition-duration: 1s;
+                transition-property: all;
+                transition-timing-function: ease;
+                
+                
+                
+            }
+
+            a:hover {
+                background-color: #900;
+                color: #FFF;
+                border-radius: 10px;
+                padding: 40px;
+            }
+            
+         
+
+        </style>
+
+    </head>
+    <body>
+        
+        
+        <section id="transition">
+            <h2>Comparativo de transições com efeito hover</h2>
+            <div class="t0"><p>sem transition</p></div>
+            <div class="t1"><p>com transition</p></div>
+            <div class="t2"><p>múltiplos efeitos</p></div>
+        </section>
+            
+        
+        <section id="timing">
+            <h2>Comparativo de transições (timming)</h2>
+            <div class="t0"><p>ease</p></div>
+            <div class="t1"><p>linear</p></div>
+            <div class="t2"><p>ease-in</p></div>
+            <div class="t3"><p>ease-out</p></div>
+            <div class="t4"><p>ease-in-out</p></div>
+        </section>
+
+        
+        <section id="elementos">
+            <h2>Aplicação em elementos diversos</h2>
+            <a href="#">Faculdade Senac Porto Alegre</a>
+        </section>    
+
+
+
+    </body>
+</html>

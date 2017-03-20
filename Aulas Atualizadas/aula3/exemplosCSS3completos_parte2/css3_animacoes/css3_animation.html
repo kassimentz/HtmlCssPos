@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Efeitos de animações em CSS 3</title>
+
+        <style type="text/css">
+
+            /* definição de animação com especificação e propriedades de início (from) e fim (to) */
+            @keyframes rodar1 {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            #anim1 {
+                width: 100px;
+                height: 100px;
+                margin: 100px;
+                background-color: #339;
+                /* nome da animação que deve ser executada */
+                animation-name: rodar1;
+                /* tempo de duração da animação que deve ser executada */
+                animation-duration: 3s;
+                /* ritmo da animação (mesmos valores possíveis na transição) */
+                animation-timing-function: linear;
+                /* quantidade de vezes que a animação deve repetir */
+                /* valor em numérico ou "infinite" para repetição contínua */
+                animation-iteration-count: infinite;
+                /* direção da trajetória da animação */
+                /* normal: trajetória inicia contínua */
+                /* alternate: trajetória inicia contínua e alterna para reversa */
+                /* reverse: trajetória inicia reversa */
+                /* alternate-reverse: trajetória inicia reversa e alterna para contínua */
+                animation-direction: alternate; 
+            }
+
+            /* definição de animação com especificação de propriedades para pontos específicos da trajetória */
+            @-webkit-keyframes rodar2 {
+                0% {
+                    transform: rotate(0deg);
+                }
+                10% {
+                    transform: rotate(-180deg); 
+                }
+                40% {
+                    transform: scale(2);
+                    border-radius: 50px;
+                }
+                70% {
+                    transform: translateX(500px);
+                }
+                100% {
+                    transform: translateY(-400px) 
+                        translateX(200px)
+                        scale(2);
+                    background-color: #063; 
+                }
+            }
+
+            #anim2 {
+                width: 100px;
+                height: 100px;
+                margin: 100px;
+                background-color: #F60;
+                /* nome da animação que deve ser executada */
+                animation-name: rodar2;
+                /* tempo de duração da animação que deve ser executada */
+                animation-duration: 10s;
+                /* ritmo da animação (mesmos valores possíveis na transição) */
+                animation-timing-function: ease;
+                /* quantidade de vezes que a animação deve repetir */
+                /* valor em numérico ou "infinite" para repetição contínua */
+                animation-iteration-count: 2;
+                /* direção da trajetória da animação */
+                /* normal: trajetória inicia contínua */
+                /* alternate: trajetória inicia contínua e alterna para reversa */
+                /* reverse: trajetória inicia reversa */
+                /* alternate-reverse: trajetória inicia reversa e alterna para contínua */
+                animation-direction: alternate;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="anim1"></div><br/>
+
+        <div id="anim2"></div><br/>
+
+    </body>
+</html>

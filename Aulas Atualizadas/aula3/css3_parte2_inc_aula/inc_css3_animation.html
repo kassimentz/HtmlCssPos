@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Efeitos de animações em CSS 3</title>
+
+        <style type="text/css">
+
+            @-webkit-keyframes rodar1 {
+
+                from {
+                    transform: rotate(0deg);  
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+
+            }
+
+
+            #anim1 {
+                width: 100px;
+                height: 100px;
+                margin: 100px;
+                background-color: #339;
+                animation-name: rodar1;
+                animation-duration: 3s;
+                animation-timing-function: linear;
+                animation-iteration-count: 3;
+                animation-delay: 3s;
+                animation-direction: alternate;
+                
+            }
+
+            @-webkit-keyframes rodar2 {
+                0% {
+                  transform: skew(100deg); 
+                  width: 200px;
+                }
+                10% {
+                    transform: rotate(180deg);
+                    background-color: purple;
+                }
+                40% {
+                    transform: translateX(200px);
+                    border-radius: 50%;
+                }
+                70% {
+                   transform: scale(1.5);
+                   background-color: pink;
+                }
+                100% {
+                    transform: translateY(100px);
+                }
+            }
+
+            #anim2 {
+                width: 100px;
+                height: 100px;
+                margin: 100px;
+                background-color: #F60;
+                animation-name: rodar2;
+                animation-duration: 3s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+               
+            }
+
+
+
+        </style>
+
+    </head>
+    <body>
+
+       
+        <div id="anim1"></div><br/>
+
+        <div id="anim2"></div><br/>
+
+    </body>
+</html>

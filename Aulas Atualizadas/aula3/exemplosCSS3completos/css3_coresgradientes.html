@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS 3 - Exemplos de aplicação de gradientes e transparências</title>
+        <meta charset="UTF-8">
+
+        <style type="text/css">
+            
+            * {
+                font-family: arial;
+                font-size: 18px;
+            }
+            
+            h1 {
+                margin-left: 25px;
+                font-size: 30px;
+            }
+            
+            div p {
+                font-weight: bold;
+                padding-top: 40px;
+                padding-right: 20px;
+                text-align: right;
+            }
+            
+            div, section {
+                width: 300px;
+                height: 300px;
+                margin: 40px 20px;
+            }
+            
+            #linear1 {
+                /* gradiente linear - padrão topo para baixo */
+                background: linear-gradient(orange, blue);
+            }
+
+            #linear2 {
+                /* gradiente linear - atributo de direção: to right, to left, to top, to bottom */
+                background: linear-gradient(to right, orange, blue);
+            }
+
+            #linear3 {
+                /* gradiente linear - atributo para direção diagonal: to bottom right, to bottom left, to top right, to top left */
+                background: linear-gradient(to bottom right, orange, blue);
+            }
+
+            #linear4 {
+                /* gradiente linear - atributo para definição de graus para girar a direção */
+                background: linear-gradient(50deg, orange,  blue);
+            }
+
+            #linear5 {
+                /* gradiente linear - combinação de diversas cores */
+                background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); 
+            }
+
+            #linear6 {
+                /*  gradiente linear - uso de transparência com rgba (último parâmetro é alpha/opacidade)*/
+                background: linear-gradient(rgba(204, 102, 000, 1), rgba(204, 102, 000, 0));
+            }
+
+            #linear7 {
+                /* repetição de gradiente linear */
+                background: repeating-linear-gradient(orange, blue 10%, red 20%);
+            }
+
+            #radial1 {
+                /* gradiente circular - combinação de cores */
+                background: radial-gradient(orange, blue, red); 
+            }
+
+            #radial2 {
+                /* gradiente circular - elipse com 100% de largura e 40% de altura */
+                background: radial-gradient(ellipse 100% 40%, orange, blue, red);
+            }
+
+            #radial3 {
+                /* gradiente circular - definição de porcentagens para cores */
+                background: radial-gradient(orange 5%, blue 15%, red 60%);
+            }
+
+            #radial4 {
+                /* gardiente circular - definição de localização: closest-side, farthest-side, closest-corner, farthest-corner*/
+                background: radial-gradient(closest-corner at 80% 55%, orange, blue, red); 
+            }
+
+            #radial5 {
+                /* repetição de gradiente circular */
+                background: repeating-radial-gradient(orange, blue 10%, red 15%);
+            }
+
+            #color1 {
+                /* cor normal usando função rgb */
+                background-color: rgb(204, 102, 000);
+            }
+
+            #color2 {
+                background-image: url(imagens/flor.png);
+                background-color: rgb(204, 102, 000);
+                /* aplicação de opacidade - equivale a 40% de transparência aplicada na cor */
+                /* nesse modo o conteúdo do elemento também receve a opacidade */
+                opacity: 0.4;
+            }
+
+            #color3 {
+                background-image: url(imagens/flor.png);
+                /* aplicação de opacidade, porém utilizando a função rgba() onde o último parâmetro é a porcentagem de trasparência na cor */
+                /* nesse modo a opacidade é aplicada apenas no background do elemento e não no seu conteúdo */
+                background-color: rgba(204, 102, 000, 0.4);
+            }
+
+            .background {
+                width: 500px;
+                height: 300px;
+                background: url(imagens/img.jpg) repeat;
+                border: 2px solid black;
+            }
+
+            .transbox {
+                margin: 60px;
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 30px;
+            }
+
+            .transbox p {
+                font-weight: bold;
+                color: #666699;
+                text-align: center;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        
+        <h1>Gradiente Linear</h1>
+        <div id="linear1"> </div>
+        <div id="linear2"> </div>
+        <div id="linear3"> </div>
+        <div id="linear4"> </div>
+        <div id="linear5"> </div>
+        <div id="linear6"> </div>
+        <div id="linear7"> </div>
+
+        <h1>Gradiente Radial</h1> 
+        <div id="radial1"> </div>
+        <div id="radial2"> </div>
+        <div id="radial3"> </div>
+        <div id="radial4"> </div>
+        <div id="radial5"> </div>
+        
+        <h1>Transparência</h1>
+        <div id="color1"> <p>COR NORMAL</p> </div>
+        <div id="color2"> <p>OPACITY</p> </div>
+        <div id="color3"> <p>RGBA</p> </div>
+       
+        <section class="background">
+            <article class="transbox">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet elementum massa nec imperdiet. Mauris auctor quam ac dolor facilisis pellentesque. </p>
+            </article>
+        </section>
+       
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Efeitos de Transformação 3D em CSS3 - Efeito flip</title>
+
+        <style type="text/css">
+
+            #container {
+                margin: 30px auto;
+                width: 450px;
+                height: 281px;
+                border: 2px solid blue; 
+                /* definição a perspectiva pela qual um elemento é visto (profundidade) */
+                /* valores em pixel, quanto maior, mais distante de quem vê */
+                perspective: 1000px;
+            }
+            
+            #card {
+                width: 100%;
+                height: 100%;
+                /* relativa a renderização 3D */
+                transform-style: preserve-3d;
+                /*  efeito de transição
+                    all para determinar qual propriedade vai fazer o efeito (width ou height)
+                    1.0s para tempo de transição
+                    linear para fluxo da transição */
+                transition: all 1s linear;  
+            }
+            
+            #container:hover #card {
+                /* rotação no eixo Y quando o mouse for posicionado em cima do elemento */
+                transform: rotateY(180deg); /* rotateX(180deg) */
+                box-shadow: -5px 5px 5px #aaa;
+            }
+            
+            .face {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(000, 000, 255, 0.3);
+                /* elemento anterior fica escondido, ao rotacionar com o hover ele vai ficar visível */
+                backface-visibility: hidden;
+            }
+            
+            .face.back {
+                display: block;
+                transform: rotateY(180deg);
+                background-color: #aaa;
+            }
+            
+            .back p, .front p {
+                font-family: arial;
+                font-size: 30px;
+                color: white;
+                text-align: center;
+            }
+            
+        </style>
+    </head>    
+
+    <body>
+
+
+        <div id="container">
+            <div id="card" class="shadow">
+                <div class="front face">
+                    <p>Olá pessoal!</p>
+                </div>
+                <div class="back face center">
+                    <p>Eu sou um efeito de flip usando transformações 3D em CSS 3 :D</p>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

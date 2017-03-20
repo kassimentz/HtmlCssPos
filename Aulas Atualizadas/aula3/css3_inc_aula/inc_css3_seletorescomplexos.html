@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS 3 - Exemplos de aplicação de Seletores Complexos</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+
+            * {
+                font-size: 16px; 
+                font-family: arial, verdana sans-serif;
+            }
+
+            a { 
+                margin: 10px; 
+                display: inline-block;
+                width: 100px;
+            }
+
+            /* seletores complexos */
+            input[placeholder] {
+                border: 2px dotted black;
+            }
+
+            input[type="email"] {
+                background-color: #c0c0c0;
+            }
+
+            p[class~="b"] {
+                background-color: orange;
+            }
+
+            a[href^="con"] {
+                background-color: red;
+            }
+
+            a[href$="php"] {
+                border: 2px solid blue;
+            }
+
+            a[href*="ome"] {
+                border: 2px solid green;   
+            }
+
+            li:first-child {
+                background-color: brown;
+            }
+
+            li:last-child {
+                background-color: purple;
+            }
+
+            li:nth-child(even) {
+                color: #d2d3d1;
+            }
+
+            li:nth-child(odd) {
+                color: #f492a2;
+            }
+
+            li:nth-child(4) a {
+                color: #789123;
+            }
+
+            div:not(.footer) {
+                font-weight: bold;
+            }
+
+            input:required {
+                background-color: yellow;
+            }
+
+            input:invalid {
+                border: 2px solid red;
+            }
+
+            input:valid {
+                border: 2px solid green;
+            }
+
+            input[type="submit"] {
+                border: 0px;
+            }
+
+            p:first-letter {
+                color: blue;
+                font-size: 24px;
+            }
+
+            p:first-line {
+                color: red;
+                font-weight: bold;
+            }
+
+            p:after {
+                content: "***";
+            }
+
+            p:before {
+                content: ">>>";
+            };
+
+        </style>
+    </head>
+    <body>
+
+        <form method="post" action="pag.php">
+            <input type="email" placeholder="E-mail">
+            <input type="password" placeholder="Senha" required>
+            <label for="pergunta">Manter conectado?</label>
+            <input type="checkbox" id="pergunta" value="S" checked>
+            <input type="submit" value="Enviar">
+        </form>
+        <br>
+
+        <a href="home.html">Home</a>
+        <a href="conteudos.html">Conteúdos</a>    
+        <a href="contato.php">Contato</a>    
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li><a href="#">Item 4</a></li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li></li>
+            <li>Item 8</li>
+        </ul>
+
+        <h3>Título 1</h3>
+        <p>Lorem inpsum <br>dolor lero lero</p>
+        <h3>Título 2</h3>
+        <a href="#">Link</a>
+
+        <p class="a b c">Parágrafo um</p>
+        <p class="d e f g">Parágrafo um</p>
+        <p class="b f g">Parágrafo dois</p>
+
+        <div>Esta div fica em negrito.</div>
+        <div>Esta div fica em negrito.</div>
+        <div class="footer">Esta div não fica em negrito.</div>
+
+    </body>
+</html>

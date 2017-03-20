@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Efeitos de Transformação 3D em CSS3</title>
+
+        <style type="text/css">
+
+            body {
+                font-family: arial, verdana, sans-serif;
+            }
+
+            h2 {
+                color: #636;
+                font-size: 40px;
+            }
+
+            #transform3d h4 {
+                margin-top: 100px;
+                background-color: #c0c0c0;
+                width: 500px;
+            }
+
+            #transform3d div {
+                width: 150px;
+                height: 150px;
+                background-color: #666699;
+                margin: 50px 100px;
+            }
+
+            #transform3d article {
+                background-color: #c0c0c0;
+                box-shadow: 3px 3px 10px #333;
+                height: 100px;
+                width: 200px;
+            }
+
+            #transform3d .t1 {
+                /* definição a perspectiva pela qual um elemento é visto (profundidade) */
+                /* valores em pixel, quanto maior, mais distante de quem vê */
+                perspective: 150px;
+                /* define a forma de renderização dos elementos agrupados (nesse caso da div e do article) */
+                /* flat: elementos filhos renderizados como bidimensionais */
+                /* preserve-3d: elementos filhos renderizados em espaço 3D */
+                transform-style: preserve-3d;
+            }
+
+            #transform3d .t1 article {
+                /* rotação no article que está dentro da div configurada como perspectiva e com preserve-3d */
+                transform: rotateX(30deg);
+            }
+
+            #transform3d .t2 {
+                /* definição a perspectiva pela qual um elemento é visto (profundidade) */
+                /* valores em pixel, quanto maior, mais distante de quem vê */
+                perspective: 150px;
+                /* define a forma de renderização dos elementos agrupados (nesse caso da div e do article) */
+                /* flat: elementos filhos renderizados como bidimensionais */
+                /* preserve-3d: elementos filhos renderizados em espaço 3D */
+                transform-style: flat;
+            }
+
+            #transform3d .t2 article {
+                /* rotação no article que está dentro da div configurada como perspectiva e com flat */
+                transform: rotateX(30deg);
+            }
+
+            #transform3d .t3 {
+                /* definição a perspectiva pela qual um elemento é visto (profundidade) */
+                /* valores em pixel, quanto maior, mais distante de quem vê */
+                perspective: 150px;
+            }
+
+            #transform3d .t3 article {
+                width: 150px;
+                /* rotação no article que está dentro da div configurada como perspectiva  */ 
+                transform: rotateX(45deg);
+            }
+
+            #transform3d .t4 {
+                /* definição a perspectiva pela qual um elemento é visto (profundidade) */
+                /* valores em pixel, quanto maior, mais distante de quem vê */
+                perspective: 150px;
+                /* mudança da origem da perspectivas no eixoX e eixoY */
+                perspective-origin: -50px -20px;
+            }
+
+            #transform3d .t4 article {
+                width: 150px;
+                /* rotação no article que está dentro da div configurada como perspectiva  */  
+                transform: rotateX(45deg);
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <h2>Transform 3D</h2>
+        <section id="transform3d">
+
+            <h4>transform: rotateX(30deg); transform-style: preserve-3d;</h4>
+            <div class="t1">
+                <article><p>Lorem ipsum dolor</p></article>
+            </div>
+
+            <h4>transform: rotateX(30deg); transform-style: flat;</h4>
+            <div class="t2">
+                <article><p>Lorem ipsum dolor</p></article>
+            </div>
+
+            <h4> perspective: 150px; transform: rotateX(45deg);</h4>
+            <div class="t3">
+                <article><p>Lorem ipsum dolor</p></article>
+            </div>
+
+            <h4>perspective: 150px; perspective-origin: -50px -20px;</h4>
+            <div class="t4">
+                <article>Lorem ipsum dolor</article>
+            </div>
+
+        </section>   
+
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Layout Responsivo (Adaptável)</title>
+        <meta charset="UTF-8" />
+
+        <style type="text/css">
+            section { 
+                height: 500px;
+                text-align: center; 
+                color: #ffffff;
+            } 
+            #container { 
+                margin: 0 auto; 
+            }
+            #esquerda { 
+                width: 25%; 
+                background: blue; 
+                float: left; 
+            }
+            #centro { 
+                width: 50%; 
+                background: green; 
+                float: left; 
+            }
+            #direita { 
+                width: 25%; 
+                background: red;
+                float: left; 
+            }
+            
+            @media (max-width: 500px) {
+  
+                #esquerda, #centro, #direita { 
+                    clear: left; 
+                    width: 100%;
+                }
+                #container { 
+                    width: 100%;
+                }
+ 
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div id="container">
+            <section id="esquerda">
+                <h3>Esquerda</h3>
+            </section>
+            <section id="centro">
+                <h3>Centro</h3>           
+            </section>
+            <section id="direita">
+                <h3>Direita</h3>                  
+            </section>
+        </div>
+
+    </body>
+</html>

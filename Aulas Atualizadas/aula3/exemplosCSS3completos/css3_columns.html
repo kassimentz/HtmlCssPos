@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS 3 - Exemplos de multicolunas e tipografia</title>
+        <meta charset="UTF-8">
+        
+        <!-- Integração com estilo externo do Google Fonts - https://www.google.com/fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+        
+        <style type="text/css">
+            
+            * {
+                margin: 20px 10px;
+                padding: 0px;
+            }
+            
+            /* definição de 3 colunas que se ajustam na largura disponível */
+            .col1 {
+                /* quantidade de colunas */
+                -webkit-column-count: 3;
+                /* espaço entre as colunas */
+                -webkit-column-gap: 60px;
+                /* separador entre as colunas */
+                -webkit-column-rule: 5px outset #666699;
+            }
+            
+            /* largura das colunas pré-definidas, a quantidade de colunas depende da largura disponível */
+            .col2 {
+                /* largura de cada coluna */
+                -webkit-column-width: 200px;
+                /* espaço entre as colunas */
+                -webkit-column-gap: 30px;
+                /* separador entre as colunas */
+                -webkit-column-rule: 5px outset #666699;
+            }
+
+            /* criação de estrutura para utilização de fonte hospedada no servidor */
+            @font-face {
+                font-family: musicnet;
+                src: url("fonts/musicnet.ttf");
+            }
+
+            /* criação de estrutura para utilização de fonte hospedada no servidor */
+            @font-face {
+                font-family: lovemoment;
+                src: url("fonts/lovemoment.otf");
+            }
+
+            h1 {
+                /* chamada do nome da fonte que foi instânciada anteriormente */
+                font-family: musicnet;
+                font-size: 50px;
+                font-weight: normal;
+            }
+
+            h2 {
+                /* chamada do nome da fonte que foi instânciada anteriormente */
+                font-family: lovemoment;
+                font-size: 50px;
+                font-weight: normal;
+            }
+            
+            h3 {
+                font-family: arial, verdana, sans-serif;
+                font-size: 30px;
+                color: #fff;
+                /* sombra em textos, para adicionar cadamadas basta separar por vírgula */
+                /* ordem dos valores: eixoX eixoY blue cor */
+                /* valores positivos deslocam a sombra para direita e para baixo */
+                /* valores negativos deslocam a sombra para esquerda e para cima */
+                text-shadow: 2px 2px 5px #666699;
+            }
+            
+            h4 {
+                font-size: 40px;
+                /* utilização de webfont hospedada no servidor do Google Fonts */
+                /* necessidade de adicionar linha de estilo externo */
+                font-family: 'Covered By Your Grace', cursive;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <h1>Sistemas para Internet</h1>
+        <h2>O melhor curso de graduação do mundo!</h2>
+        <h3>Faculdade Senac Porto Alegre</h3>
+        <h4>Tecnologia de Informação</h4>
+        
+        <p class="col1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet elementum massa nec imperdiet. Mauris auctor quam ac dolor facilisis pellentesque. Sed vitae justo quis odio sagittis porttitor. Aliquam pharetra venenatis ipsum non auctor. Sed varius lacinia mauris vitae tincidunt. Maecenas augue sapien, consequat eu mauris nec, sollicitudin maximus ligula. Mauris facilisis enim sit amet congue rhoncus
+            Nullam quis facilisis ex, pulvinar pharetra leo. Pellentesque ac nisl ac lacus sagittis aliquam. Nam euismod tempus est quis laoreet. Quisque fermentum tortor ut nunc congue imperdiet. Nullam aliquet ipsum ipsum, et convallis nunc vulputate eu. Duis tortor erat, fringilla vel sapien vitae, pellentesque elementum ligula. Duis maximus lacinia nunc vitae porta. Curabitur blandit auctor elit pellentesque aliquet. Pellentesque pretium sapien lacus. Nullam quis sodales risus. Cras egestas risus lectus, aliquet fermentum neque egestas eget. Aliquam pretium tempor velit vitae tempus. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet elementum massa nec imperdiet. Mauris auctor quam ac dolor facilisis pellentesque. Sed vitae justo quis odio sagittis porttitor. Aliquam pharetra venenatis ipsum non auctor. Sed varius lacinia mauris vitae tincidunt. Maecenas augue sapien, consequat eu mauris nec, sollicitudin maximus ligula. Mauris facilisis enim sit amet congue rhoncus
+            Nullam quis facilisis ex, pulvinar pharetra leo. Pellentesque ac nisl ac lacus sagittis aliquam. Nam euismod tempus est quis laoreet. Quisque fermentum tortor ut nunc congue imperdiet. Nullam aliquet ipsum ipsum, et convallis nunc vulputate eu. Duis tortor erat, fringilla vel sapien vitae, pellentesque elementum ligula. Duis maximus lacinia nunc vitae porta. Curabitur blandit auctor elit pellentesque aliquet. Pellentesque pretium sapien lacus. Nullam quis sodales risus. Cras egestas risus lectus, aliquet fermentum neque egestas eget. Aliquam pretium tempor velit vitae tempus. 
+        </p>
+        <br><br>
+        
+        <p class="col2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet elementum massa nec imperdiet. Mauris auctor quam ac dolor facilisis pellentesque. Sed vitae justo quis odio sagittis porttitor. Aliquam pharetra venenatis ipsum non auctor. Sed varius lacinia mauris vitae tincidunt. Maecenas augue sapien, consequat eu mauris nec, sollicitudin maximus ligula. Mauris facilisis enim sit amet congue rhoncus
+            Nullam quis facilisis ex, pulvinar pharetra leo. Pellentesque ac nisl ac lacus sagittis aliquam. Nam euismod tempus est quis laoreet. Quisque fermentum tortor ut nunc congue imperdiet. Nullam aliquet ipsum ipsum, et convallis nunc vulputate eu. Duis tortor erat, fringilla vel sapien vitae, pellentesque elementum ligula. Duis maximus lacinia nunc vitae porta. Curabitur blandit auctor elit pellentesque aliquet. Pellentesque pretium sapien lacus. Nullam quis sodales risus. Cras egestas risus lectus, aliquet fermentum neque egestas eget. Aliquam pretium tempor velit vitae tempus. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet elementum massa nec imperdiet. Mauris auctor quam ac dolor facilisis pellentesque. Sed vitae justo quis odio sagittis porttitor. Aliquam pharetra venenatis ipsum non auctor. Sed varius lacinia mauris vitae tincidunt. Maecenas augue sapien, consequat eu mauris nec, sollicitudin maximus ligula. Mauris facilisis enim sit amet congue rhoncus
+            Nullam quis facilisis ex, pulvinar pharetra leo. Pellentesque ac nisl ac lacus sagittis aliquam. Nam euismod tempus est quis laoreet. Quisque fermentum tortor ut nunc congue imperdiet. Nullam aliquet ipsum ipsum, et convallis nunc vulputate eu. Duis tortor erat, fringilla vel sapien vitae, pellentesque elementum ligula. Duis maximus lacinia nunc vitae porta. Curabitur blandit auctor elit pellentesque aliquet. Pellentesque pretium sapien lacus. Nullam quis sodales risus. Cras egestas risus lectus, aliquet fermentum neque egestas eget. Aliquam pretium tempor velit vitae tempus. 
+        </p>
+
+    </body>
+</html>

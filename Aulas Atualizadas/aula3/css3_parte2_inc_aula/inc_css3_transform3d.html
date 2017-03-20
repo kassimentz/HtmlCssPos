@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Efeitos de Transformação 3D em CSS3</title>
+
+        <style type="text/css">
+            
+            body {
+                font-family: arial, verdana, sans-serif;
+            }
+            
+            h2 {
+                color: #636;
+                font-size: 40px;
+            }
+            
+            #transform3d h4, #transformorigin h4 {
+                margin-top: 100px;
+                background-color: #c0c0c0;
+                width: 500px;
+            }
+          
+            #transform3d div {
+                width: 150px;
+                height: 150px;
+                background-color: #666699;
+                margin: 50px 100px;
+                border-left: 10px solid #333333;
+                border-top: 10px solid #333333;
+            }
+            
+        
+            
+            #transform3d .t1 {
+               
+            }
+            
+            #transform3d .t1 article {
+                height: 150px;
+                width: 150px;
+                background-color: red;
+                
+            }
+            
+            #transform3d .t2 {
+               
+                
+            }
+            
+            #transform3d .t2 article {
+                height: 150px;
+                width: 150px;
+                background-color: red;
+               
+            }
+            
+            #transform3d .t3 article {
+                height: 150px;
+                width: 150px;
+                background-color: red;
+                
+            }
+            
+            #transform3d .t3:hover article {
+                height: 150px;
+                width: 150px;
+               
+            }
+            
+            
+        </style>
+
+    </head>
+    <body>
+        
+        <h2>Transform 3D</h2>
+        <section id="transform3d">
+            <h4>normal</h4>
+            <div class="t0"></div>
+            
+            <h4> perspective: 150px; transform: rotateX(45deg);</h4>
+            <div class="t1">
+                <article><p>Lorem ipsum dolor</p></article>
+            </div>
+            
+            <h4>perspective: 150px; perspective-origin: 100% 5%;</h4>
+            <div class="t2">
+                <article>Lorem ipsum dolor</article>
+            </div>
+            
+            <h4>backface-visibility: hidden;</h4>
+            <div class="t3">
+                <article>Lorem ipsum dolor</article>
+            </div>
+        </section>   
+        
+        
+
+
+    </body>
+</html>

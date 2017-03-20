@@ -1,0 +1,45 @@
+body {
+	background-color: #666699;
+	background-image: url(../imagens/wall.jpg);
+	background-repeat: repeat-y;
+	background-position: right;
+	background-attachment: fixed;
+	font-size: 16px;
+	font-family: arial, verdana, sans-serif;
+
+}
+
+.bordas {
+	border-top: 2px dashed #c0c0c0;
+	border-bottom: 10px dotted #333333;
+	margin: 30px;
+}
+
+p {
+	width: 70%;
+}
+
+h1 {
+	color: #ffffff;
+	text-decoration: overline underline line-through;
+}
+
+a {
+	color: yellow;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+
+a:hover {
+	color: blue;
+	font-variant: normal;
+	cursor: progress;
+}
+
+ul li {
+	list-style-type: square;
+}
+
+ol li {
+	list-style-type: hiragana;
+}

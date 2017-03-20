@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS 3 - Exemplos de aplicação de filtros para imagens</title>
+        <meta charset="UTF-8">
+
+        <style type="text/css">
+           
+            figure {
+                margin: 40px;
+                width: 500px;
+                float: left;
+            }
+            
+            figure figcaption {
+                background-color: #c0c0c0;
+                font-family: arial;
+                padding: 10px
+            }
+            
+            img {
+                width: 100%;
+            }
+
+            /* aplicação do filtro para tons de cinza, possibilidade de ajuste do tom por porcentagem */
+            #filter1 {
+                -webkit-filter: grayscale(100%);
+            }
+
+            /* aplicação do filtro para "embassamento" (blur), possibilidade de ajuste por valor */
+            #filter2 {
+                -webkit-filter: blur(5px);
+            }
+            
+            /* aplicação do filtro para brilho, possibilidade de ajuste por porcentagem/valor */
+            #filter3 {
+                -webkit-filter: brightness(180%);
+            }
+
+            /* aplicação do filtro para contraste, possibilidade de ajuste por porcentagem/valor */            
+            #filter4 {
+                -webkit-filter: contrast(40%);
+            }
+
+            /* aplicação do filtro para inversão de cores, possibilidade de ajuste por porcentagem */
+            #filter5 {
+                -webkit-filter: invert(100%);
+            }
+
+            /* aplicação do filtro para "envelhecimento", possibilidade de ajuste do tom por porcentagem */
+            #filter6 {
+                -webkit-filter: sepia(100%);
+            }
+
+            /* aplicação do filtro para saturação, possibilidade de ajuste por porcentagem/valor */                        
+            #filter7 {
+                -webkit-filter: saturate(300%);
+            }
+
+            /* aplicação do filtro para matiz, possibilidade de ajuste por graus (medida em deg) */            
+            #filter8 {
+                -webkit-filter: hue-rotate(70deg);
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+
+        <figure>
+            <img src="imagens/img.jpg" id="filter1">
+            <figcaption>grayscale() - tons de cinza</figcaption>
+        </figure>
+
+        <figure>
+            <img src="imagens/img.jpg" id="filter2">
+            <figcaption>blur() - embassar/ofuscar </figcaption>
+        </figure>
+
+        <figure>        
+            <img src="imagens/img.jpg" id="filter3">
+            <figcaption>brightness() - brilho</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter4">
+            <figcaption>contrast() - contranste</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter5">
+            <figcaption>invert() - inversão de cores</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter6">
+            <figcaption>sepia() - envelhecimento</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter7">
+            <figcaption>saturate() - saturação</figcaption>
+        </figure>   
+        
+        <figure>
+            <img src="imagens/img.jpg" id="filter8">
+            <figcaption>hue-rotate() - matiz</figcaption>
+        </figure>
+    </body>
+</html>

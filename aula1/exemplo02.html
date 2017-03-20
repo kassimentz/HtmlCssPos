@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Segundo Exemplo</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+
+		<form action="page.php" method="">
+
+			<label for="user">Email</label>
+			<input type="email" name="user" id="user" required placeholder="Digite o Email">
+			<br><br>
+
+			<label for="pass">Senha</label>
+			<input type="password" name="pass" id="pass" required placeholder="Digite a senha">
+			<br><br>
+
+			<label for="num">Número</label>
+			<input name="num" id="num" type="number" max="20" min="0" step="2">
+			<br><br>
+
+			<label for="ran">Range</label>
+			<input name="ran" id="ran" type="range" max="20" min="0" step="2">
+			<br><br>
+
+			<label for="cor">Color</label>
+			<input name="cor" id="cor" type="color">
+			<br><br>
+
+			<label for="data">Data</label>
+			<input name="data" id="data" type="date">
+			<br><br>
+
+			<script>
+			  (function() {
+			    var cx = '003139464069071971861:6mnawidz5k8';
+			    var gcse = document.createElement('script');
+			    gcse.type = 'text/javascript';
+			    gcse.async = true;
+			    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			    var s = document.getElementsByTagName('script')[0];
+			    s.parentNode.insertBefore(gcse, s);
+			  })();
+			</script>
+			<gcse:search></gcse:search>
+
+			<input type="submit" value="Entrar">
+
+		</form>
+		
+	</body>
+</html>

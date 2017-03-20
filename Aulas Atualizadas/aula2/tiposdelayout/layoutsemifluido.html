@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Layout Semi-fluído (Fluído Híbrido)</title>
+        <meta charset="UTF-8" />
+
+        <style type="text/css">
+            section { 
+                height: 500px;
+                text-align: center; 
+                color: #ffffff;
+            } 
+            #container { 
+                max-width: 960px; 
+                min-width: 600px; 
+                margin: 0 auto; 
+                height: 500px; 
+                border: 2px solid #c0c0c0;
+            }
+            #esquerda { 
+                width: 25%; 
+                background: blue; 
+                float: left; 
+            }
+            #centro { 
+                width: 50%; 
+                background: green; 
+                float: left; 
+            }
+            #direita { 
+                width: 25%; 
+                background: red;
+                float: left; 
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="container">
+            <section id="esquerda">
+                <h3>Esquerda</h3>
+            </section>
+            <section id="centro">
+                <h3>Centro</h3>           
+            </section>
+            <section id="direita">
+                <h3>Direita</h3>                  
+            </section>
+        </div>
+
+    </body>
+</html>
